@@ -37,11 +37,9 @@ export default {
     processAuthUser: function () {
       var self = this;
       axios
-        .post(
-          "http://https://informationmanagementuig3m3e10.herokuapp.com//user/auth/",
-          self.user_in,
-          { headers: {} }
-        )
+        .post("http://127.0.0.1:8080/user/auth/", self.user_in, {
+          headers: {},
+        })
         .then((result) => {
           self.$emit("log-in", self.user_in.username);
         })
