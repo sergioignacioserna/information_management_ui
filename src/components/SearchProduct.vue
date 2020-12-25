@@ -65,9 +65,12 @@ export default {
     searchProduct: function () {
       var self = this;
       axios
-        .get("http://127.0.0.1:8080/user/product/" + this.value, {
-          headers: {},
-        })
+        .get(
+          "https://g3m3e10frontend.herokuapp.com/user/product/" + this.value,
+          {
+            headers: {},
+          }
+        )
         .then((result) => {
           self.data = result.data;
           self.seen = true;

@@ -73,9 +73,12 @@ export default {
     searchClient: function () {
       var self = this;
       axios
-        .get("http://127.0.0.1:8080/user/client/" + this.value, {
-          headers: {},
-        })
+        .get(
+          "https://g3m3e10frontend.herokuapp.com/user/client/" + this.value,
+          {
+            headers: {},
+          }
+        )
         .then((result) => {
           self.data = result.data;
           self.seen = true;
